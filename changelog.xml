@@ -15,14 +15,31 @@
 
     <changeSet id="JIRA-1112" author="amalik" labels="JIRA-1112">
         <sqlFile path="sql/JIRA-1112.sql" relativeToChangelogFile="true" />
+        <rollback>
+            <sql>
+                DROP TABLE person;
+            </sql>
+        </rollback>
     </changeSet>
 
     <changeSet id="JIRA-1113" author="amalik" labels="JIRA-1113">
         <sqlFile path="sql/JIRA-1113.sql" relativeToChangelogFile="true" />
+        <rollback>
+            <sql>
+                TRUNCATE TABLE person;
+                TRUNCATE TABLE company;
+                DROP TABLE company;
+            </sql>
+        </rollback>
     </changeSet>
 
     <changeSet id="JIRA-1114" author="amalik" labels="JIRA-1114">
         <sqlFile path="sql/JIRA-1114.sql" relativeToChangelogFile="true" />
+        <rollback>
+            <sql>
+                ALTER TABLE company DROP COLUMN country;
+            </sql>
+        </rollback>
     </changeSet>
 
     <!-- <includeAll path="sql/releases/initial/01-ddl" />
