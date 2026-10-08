@@ -1,0 +1,1 @@
+ALTER TABLE company ADD country VARCHAR(2);

@@ -1,0 +1,14 @@
+{
+  "configuration": {
+    "liquibase.reports": {},
+    "liquibase.analytics": {
+      "enabled": false
+    }
+  },
+  "liquibase.properties": {
+    "liquibase.properties": "/Users/adeelmalik/Desktop/LiquibaseHub/Change Intelligence Repo/liquibase.properties"
+  },
+  "liquibase.flowfile.yaml": {
+    "liquibase.flowfile.yaml": "/Users/adeelmalik/Desktop/LiquibaseHub/Change Intelligence Repo/liquibase.flowfile.yaml"
+  }
+}

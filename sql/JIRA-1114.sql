@@ -1,1 +1,2 @@
-ALTER TABLE company ADD country VARCHAR(2);
+
+ALTER TABLE person ADD country VARCHAR(2);

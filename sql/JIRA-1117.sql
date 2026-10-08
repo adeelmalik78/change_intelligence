@@ -1,0 +1,1 @@
+ALTER TABLE person ADD zip VARCHAR(5);

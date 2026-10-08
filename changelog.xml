@@ -13,7 +13,7 @@
     <!-- <include file="sql/compare/compare1.sql" /> -->
 
 
-    <changeSet id="JIRA-1112" author="amalik" labels="JIRA-1112">
+    <changeSet id="JIRA-1112" author="amalik" labels="JIRA-1112" context="dev,test,prod" >
         <sqlFile path="sql/JIRA-1112.sql" relativeToChangelogFile="true" />
         <rollback>
             <sql>
@@ -22,19 +22,36 @@
         </rollback>
     </changeSet>
 
-    <changeSet id="JIRA-1113" author="amalik" labels="JIRA-1113">
+    <changeSet id="JIRA-1113" author="amalik" labels="JIRA-1113" context="dev,test,prod" >
         <sqlFile path="sql/JIRA-1113.sql" relativeToChangelogFile="true" />
         <rollback>
             <sql>
-                TRUNCATE TABLE person;
-                TRUNCATE TABLE company;
                 DROP TABLE company;
             </sql>
         </rollback>
     </changeSet>
 
-    <changeSet id="JIRA-1114" author="amalik" labels="JIRA-1114">
+    <changeSet id="JIRA-1114" author="amalik" labels="JIRA-1114" context="dev,test,prod" >
         <sqlFile path="sql/JIRA-1114.sql" relativeToChangelogFile="true" />
+        <rollback>
+            <sql>
+                ALTER TABLE person DROP COLUMN country;
+            </sql>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="JIRA-1115" author="amalik" labels="JIRA-1115" context="dev,test,prod" >
+        <sqlFile path="sql/JIRA-1115.sql" relativeToChangelogFile="true" />
+        <rollback>
+            <sql>
+                TRUNCATE TABLE person;
+                TRUNCATE TABLE company;
+            </sql>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="JIRA-1116" author="amalik" labels="JIRA-1116" context="dev,test,prod" >
+        <sqlFile path="sql/JIRA-1116.sql" relativeToChangelogFile="true" />
         <rollback>
             <sql>
                 ALTER TABLE company DROP COLUMN country;
@@ -42,10 +59,13 @@
         </rollback>
     </changeSet>
 
-    <!-- <includeAll path="sql/releases/initial/01-ddl" />
-    <includeAll path="sql/releases/initial/04-views" />
-    <includeAll path="sql/releases/initial/05-procedures" />
-    <includeAll path="sql/releases/initial/06-triggers" />
-    <includeAll path="sql/releases/initial/08-data" /> -->
+    <changeSet id="JIRA-1117" author="amalik" labels="JIRA-1117" context="dev,test,prod" >
+        <sqlFile path="sql/JIRA-1117.sql" relativeToChangelogFile="true" />
+        <rollback>
+            <sql>
+                ALTER TABLE person DROP COLUMN zip;
+            </sql>
+        </rollback>
+    </changeSet>
 
  </databaseChangeLog>
