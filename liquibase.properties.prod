@@ -10,7 +10,7 @@ liquibase.command.password: DATICAL_USER_PW
 # logLevel: INFO
 liquibase.reports.open=false
 liquibase.reports.enabled=true
-
+liquibase.reports.path=reports
 
 
 # export LIQUIBASE_PLATFORM_ENABLED=true
